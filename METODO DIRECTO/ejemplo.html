@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO DIRECTO</title>
+</head>
+<body>
+    <input type="number" id="x1" placeholder="x1">
+    <input type="number" id="y1" placeholder="y1">
+    <input type="number" id="x2" placeholder="x2">
+    <input type="number" id="y2" placeholder="y2">
+    <button id="graficar" onclick="Graficar()">Graficar</button>
+    <p id="pendiente">
+        
+    </p>
+    <script type="text/javascript">
+        function Graficar() {
+            let x1=document.getElementById("x1").value;
+            let y1=document.getElementById("y1").value;
+            let x2=document.getElementById("x2").value;
+            let y2=document.getElementById("y2").value;
+            
+            let y,m,x,b;
+            let iteraciones;
+            x=x1;
+            m=(y2-y1)/(x2-x1);
+            b=(y1)-(m*x1);
+            y=(m*x)+b;
+            iteraciones=x2-x1;
+            alert("m: "+m+" b: "+b+" y:"+y+" iteraciones: "+iteraciones);
+            
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
